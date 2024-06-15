@@ -8,16 +8,17 @@ import Contact from "./components/organisms/Contact";
 
 export default function Home() {
   return (
-    <main className="bg-site bg-center bg-no-repeat bg-cover overflow-hidden">
-      <Header />
-      <Banner />
+    <main className="bg-site bg-cover bg-left-top bg-no-repeat overflow-hidden">
+      <div id="home" className="min-h-screen">
+        <Header />
+        <Banner />
+      </div>
       <Navbar />
       <About />
       <Service />
       <Work />
       <Contact />
-      <div className="h-[4000px]">
-      </div>
+      <div className="h-fit"></div>
     </main>
   );
 }

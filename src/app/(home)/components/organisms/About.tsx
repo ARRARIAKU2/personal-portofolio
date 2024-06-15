@@ -1,9 +1,9 @@
 function About() {
-    return (
-        <section id="about" className="py-8 lg:py-24 lg:h-screen flex items-center">
-            tes
-        </section>
-    )
+  return (
+    <section id="about" className="section">
+      about
+    </section>
+  );
 }
 
-export default About
+export default About;

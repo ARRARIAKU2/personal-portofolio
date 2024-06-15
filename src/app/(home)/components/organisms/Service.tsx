@@ -1,9 +1,9 @@
 function Service() {
-    return (
-        <section id="service" className="py-8 lg:py-24 lg:h-screen flex items-center">
-            tes
-        </section>
-    )
+  return (
+    <section id="service" className="section">
+      Seervice
+    </section>
+  );
 }
 
-export default Service
+export default Service;
