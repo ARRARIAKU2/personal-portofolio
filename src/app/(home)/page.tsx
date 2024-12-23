@@ -6,7 +6,7 @@ import Service from "./components/organisms/Service";
 import Work from "./components/organisms/Work";
 import Contact from "./components/organisms/Contact";
 
-export default function Home() {
+function Home() {
   return (
     <main className="bg-site bg-cover bg-left-top bg-no-repeat overflow-hidden">
       <div id="home" className="min-h-screen">
@@ -22,3 +22,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;

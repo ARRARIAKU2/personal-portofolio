@@ -1,13 +1,15 @@
 "use client";
-import profile from "/public/profile.jpg";
+import profile from "@/public/profile.jpg";
+import { useRouter } from "next/navigation";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { fadeIn } from "../variant";
+import { fadeIn } from "@/app/(home)/components/variant";
 import Image from "next/image";
 import Link from "next/link";
 
 function Banner() {
+  const router = useRouter();
   return (
     <section className="min-h-[85vh] lg:min-h-[78vh] flex items-center">
       <div className="container mx-auto">
@@ -29,7 +31,7 @@ function Banner() {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-6 text-4xl lg:text-[50px] font-semibold uppercase leading-[1]"
             >
-              <span className="text-white">I'am a </span>
+              <span className="text-white">I'm a </span>
               <TypeAnimation
                 sequence={[
                   2000,
@@ -53,45 +55,62 @@ function Banner() {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              reiciendis, minus at earum aspernatur
+              Hi, I'm Lana, a Passionate and enthusiastic Frontend Developer
+              with 1+ years of experience.
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.6)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="flex items-center gap-4 max-w-max mb-12 mx-auto lg:mx-0"
+              className="flex items-center gap-6 max-w-max mb-12 mx-auto lg:mx-0"
             >
-              <Link
-                href="https://wa.me/6281273532695"
-                className="btn py-2 px-6 items-center"
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                Contact Me
-              </Link>
-              <Link
-                href="https://www.canva.com/design/DAGCrTW6IdQ/nfYZmsc9rT5eof9GKPgH1Q/edit?utm_content=DAGCrTW6IdQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                className="text-gradient btn-link"
-              >
-                My Portofolio
-              </Link>
+                <div
+                  className="btn py-2 px-6 items-center"
+                  onClick={() => router.push("https://wa.me/6281273532695")}
+                >
+                  Contact Me
+                </div>
+              </motion.button>
+              <motion.button>
+                <div
+                  className="text-gradient btn-link"
+                  onClick={() =>
+                    router.push(
+                      "https://www.canva.com/design/DAGCrTW6IdQ/nfYZmsc9rT5eof9GKPgH1Q/edit?utm_content=DAGCrTW6IdQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                    )
+                  }
+                >
+                  My Portofolio
+                </div>
+              </motion.button>
             </motion.div>
             <motion.div
-              variants={fadeIn("up", 0.7)}
+              variants={fadeIn("right", 0.7)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
               className="flex items-center gap-4 text-2xl max-w-max mx-auto lg:mx-0"
             >
-              <Link href="https://github.com/ARRARIAKU2">
-                <FaGithub />
-              </Link>
-              <Link href="https://www.instagram.com/m_alana/">
-                <FaInstagram />
-              </Link>
-              <Link href="https://www.linkedin.com/in/m-alana/">
-                <FaLinkedin />
-              </Link>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                <Link href="https://github.com/ARRARIAKU2">
+                  <FaGithub />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                <Link href="https://www.instagram.com/m_alana/">
+                  <FaInstagram />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                <Link href="https://www.linkedin.com/in/m-alana/">
+                  <FaLinkedin />
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
           <motion.div
