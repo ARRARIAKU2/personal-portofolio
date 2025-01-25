@@ -1,10 +1,11 @@
 "use client";
 import { Link as ScrollLink } from "react-scroll";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/app/(home)/components/variant";
-import Link from "next/link";
 
 function Header() {
+  const router = useRouter();
   return (
     <header className="py-8">
       <div className="container mx-auto">
@@ -28,12 +29,12 @@ function Header() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Link
+              <div
                 className="btn py-2 px-6 items-center"
-                href={"https://wa.me/6281273532695"}
+                onClick={() => router.push("https://wa.me/6281273532695")}
               >
                 Work With Me
-              </Link>
+              </div>
             </motion.button>
           </div>
         </motion.div>
