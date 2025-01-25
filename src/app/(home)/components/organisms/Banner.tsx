@@ -50,7 +50,7 @@ function Banner() {
                 />
               </div>
             </motion.div>
-            <motion.p
+            <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
               whileInView={"show"}
@@ -60,7 +60,7 @@ function Banner() {
                 Hi, I&apos;m Lana, a Passionate and enthusiastic Frontend
                 Developer with 1+ years of experience.
               </div>
-            </motion.p>
+            </motion.div>
             <motion.div
               variants={fadeIn("up", 0.6)}
               initial="hidden"
