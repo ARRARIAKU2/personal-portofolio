@@ -13,26 +13,30 @@ function Header() {
           variants={fadeIn("down", 0.5)}
           initial="hidden"
           whileInView={"show"}
-          className="flex items-center justify-between"
         >
-          <Link
-            activeClass="active"
-            spy={true}
-            to="about"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
-          >
-            M. ALANA
-          </Link>
-          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <div
-              className="btn py-2 px-6 items-center"
-              onClick={() => router.push("https://wa.me/6281273532695")}
+          <div className="flex items-center justify-between">
+            <Link
+              activeClass="active"
+              spy={true}
+              to="about"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
             >
-              Work With Me
-            </div>
-          </motion.button>
+              M. ALANA
+            </Link>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <div
+                className="btn py-2 px-6 items-center"
+                onClick={() => router.push("https://wa.me/6281273532695")}
+              >
+                Work With Me
+              </div>
+            </motion.button>
+          </div>
         </motion.div>
       </div>
     </header>
