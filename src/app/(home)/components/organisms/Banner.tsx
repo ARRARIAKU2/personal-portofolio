@@ -1,6 +1,5 @@
 "use client";
 import profile from "@/public/profile.jpg";
-import { useRouter } from "next/navigation";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
@@ -9,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Banner() {
-  const router = useRouter();
   return (
     <section className="min-h-[85vh] lg:min-h-[78vh] flex items-center">
       <div className="container mx-auto">
@@ -72,24 +70,20 @@ function Banner() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <div
+                  <Link
                     className="btn py-2 px-6 items-center"
-                    onClick={() => router.push("https://wa.me/6281273532695")}
+                    href="https://wa.me/6281273532695"
                   >
                     Contact Me
-                  </div>
+                  </Link>
                 </motion.button>
                 <motion.button>
-                  <div
-                    className="text-gradient btn-link"
-                    onClick={() =>
-                      router.push(
-                        "https://www.canva.com/design/DAGCrTW6IdQ/nfYZmsc9rT5eof9GKPgH1Q/edit?utm_content=DAGCrTW6IdQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                      )
-                    }
+                  <Link
+                    className="text-gradient btn-link cursor-pointer"
+                    href="https://www.canva.com/design/DAGCrTW6IdQ/nfYZmsc9rT5eof9GKPgH1Q/edit?utm_content=DAGCrTW6IdQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                   >
                     My Portofolio
-                  </div>
+                  </Link>
                 </motion.button>
               </div>
             </motion.div>
