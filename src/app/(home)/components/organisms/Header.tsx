@@ -1,11 +1,10 @@
 "use client";
-import { Link } from "react-scroll";
-import { useRouter } from "next/navigation";
+import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/app/(home)/components/variant";
+import Link from "next/link";
 
 function Header() {
-  const router = useRouter();
   return (
     <header className="py-8">
       <div className="container mx-auto">
@@ -15,7 +14,7 @@ function Header() {
           whileInView={"show"}
         >
           <div className="flex items-center justify-between">
-            <Link
+            <ScrollLink
               activeClass="active"
               spy={true}
               to="about"
@@ -24,17 +23,17 @@ function Header() {
               className="cursor-pointer"
             >
               M. ALANA
-            </Link>
+            </ScrollLink>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <div
+              <Link
                 className="btn py-2 px-6 items-center"
-                onClick={() => router.push("https://wa.me/6281273532695")}
+                href={"https://wa.me/6281273532695"}
               >
                 Work With Me
-              </div>
+              </Link>
             </motion.button>
           </div>
         </motion.div>
