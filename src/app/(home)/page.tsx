@@ -9,7 +9,7 @@ import Contact from "./components/organisms/Contact";
 function Home() {
   return (
     <main className="bg-site bg-cover bg-left-top bg-no-repeat overflow-hidden">
-      <div id="home" className="min-h-screen">
+      <div id="home" className="h-dvh sm:min-h-screen">
         <Header />
         <Banner />
       </div>
