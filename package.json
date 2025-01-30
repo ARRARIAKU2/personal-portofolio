@@ -1,30 +1,28 @@
 {
-  "name": "portofolio",
+  "name": "portofolios",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.23",
-    "react": "^18",
-    "react-dom": "^18",
-    "sharp": "^0.33.5"
+    "motion": "^12.0.6",
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-scroll": "^1.9.0",
+    "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@types/react-scroll": "^1.8.10",
-    "motion": "^12.0.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "postcss": "^8",
-    "react-countup": "^6.5.3",
-    "react-icons": "^5.4.0",
-    "react-scroll": "^1.9.0",
-    "react-type-animation": "^3.2.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
