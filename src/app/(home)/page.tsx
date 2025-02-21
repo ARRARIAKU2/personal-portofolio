@@ -9,11 +9,11 @@ import Contact from "./components/organisms/Contact";
 function Home() {
   return (
     <main className="bg-site bg-cover bg-left-top bg-no-repeat overflow-hidden">
+      <Navbar />
       <div id="home" className="min-h-screen">
         <Header />
         <Banner />
       </div>
-      <Navbar />
       <About />
       <Service />
       <Work />

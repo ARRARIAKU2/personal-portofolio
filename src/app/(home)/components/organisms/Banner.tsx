@@ -29,7 +29,7 @@ function Banner() {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
             >
-              <div className="mb-6 text-4xl lg:text-[50px] font-semibold uppercase leading-[1]">
+              <div className="mb-6 text-4xl lg:text-[50px] font-semibold uppercase leading-none">
                 <span className="text-white">I&apos;m a </span>
                 <TypeAnimation
                   sequence={[
