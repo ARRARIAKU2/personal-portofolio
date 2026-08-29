@@ -10,6 +10,7 @@ const stats = [
 ];
 
 const skills = [
+  "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
@@ -19,17 +20,12 @@ const skills = [
   "Tailwind CSS",
   "Python",
   "MongoDB",
-  "Laravel",
-  "Leaflet",
-  "Computer Vision",
+  "PostgreSQL",
 ];
 
 function About() {
   return (
-    <section
-      id="about"
-      className="min-h-[100dvh] flex items-center py-24 lg:py-0"
-    >
+    <section id="about" className="min-h-dvh flex items-center py-24 lg:py-0">
       <div className="w-full max-w-7xl mx-auto px-4">
         {/* Asymmetric 12-col split: content left-weighted, stats offset right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-16 lg:gap-x-8">
@@ -50,7 +46,7 @@ function About() {
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-white/70 max-w-[60ch]">
               I&apos;m M. Alana, a frontend developer grounded in JavaScript and
-              Python. I&apos;ve shipped real-time fleet tracking, enterprise
+              Python. I&apos;ve developed real-time fleet tracking, enterprise
               audit systems, and biomedical computer-vision research — always
               putting user comfort first and moving fast inside a team.
             </p>

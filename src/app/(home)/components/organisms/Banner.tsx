@@ -126,11 +126,11 @@ function Banner() {
             initial="hidden"
             whileInView={"show"}
           >
-            <div className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]">
+            <div className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-120.5">
               <Image
                 src={profile}
                 alt="profile"
-                className="h-[450px] w-[450px] rounded-full shrink-0"
+                className="h-112.5 w-112.5 rounded-full shrink-0"
               />
             </div>
           </motion.div>
