@@ -66,7 +66,7 @@ function Rivals() {
           </div>
 
           {/* Stats grid */}
-          <div className="relative z-10 mt-12 grid grid-cols-1 gap-x-4 gap-y-8 border-t border-white/10 pt-10 sm:grid-cols-2 md:grid-cols-3">
+          <div className="relative z-10 mt-6 grid grid-cols-1 gap-x-4 gap-y-4 border-t border-white/10 pt-5 sm:mt-12 sm:gap-y-8 sm:pt-10 sm:grid-cols-2 md:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center lg:text-left">
                 <div className="flex items-center justify-center gap-2 lg:justify-start">

@@ -91,7 +91,7 @@ function Work() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.3 }}
-          className="mb-16 lg:mb-20"
+          className="mb-6 lg:mb-20"
         >
           {/* <span className="text-sm uppercase tracking-[0.3em] text-accent">
             Experience
@@ -113,7 +113,7 @@ function Work() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.2 }}
-              className="group grid grid-cols-1 lg:grid-cols-12 gap-y-4 lg:gap-x-8 py-10 border-b border-white/10 hover:bg-white/[0.02] transition-colors duration-300"
+              className="group grid grid-cols-1 lg:grid-cols-12 gap-y-4 lg:gap-x-8 py-6 border-b border-white/10 hover:bg-white/[0.02] transition-colors duration-300"
             >
               <div className="lg:col-span-3">
                 <div className="text-sm text-accent">{job.period}</div>

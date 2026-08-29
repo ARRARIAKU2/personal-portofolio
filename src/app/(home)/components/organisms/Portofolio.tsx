@@ -39,7 +39,7 @@ function Portofolio() {
   return (
     <section id="portofolio" className="min-h-[100dvh] flex items-center py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-x-8">
           {/* Sticky heading column — asymmetric, left-aligned */}
           <motion.div
             variants={fadeIn("right", 0.2)}
@@ -74,7 +74,7 @@ function Portofolio() {
               >
                 <Link
                   href={project.href}
-                  className="group block py-8 lg:py-10 transition-colors duration-300"
+                  className="group block py-4 lg:py-10 transition-colors duration-300"
                 >
                   <div className="flex items-start gap-6">
                     <span className="text-lg text-white/30 group-hover:text-accent transition-colors duration-300 pt-1">
