@@ -93,11 +93,14 @@ function Work() {
           viewport={{ once: false, amount: 0.3 }}
           className="mb-16 lg:mb-20"
         >
-          <span className="text-sm uppercase tracking-[0.3em] text-accent">
+          {/* <span className="text-sm uppercase tracking-[0.3em] text-accent">
             Experience
           </span>
           <h2 className="mt-5 text-4xl md:text-6xl tracking-tighter leading-none max-w-[16ch]">
             Where I&apos;ve shipped
+          </h2> */}
+          <h2 className="mt-5 text-4xl md:text-6xl tracking-tighter leading-none max-w-[16ch]">
+            Experience
           </h2>
         </motion.div>
 
