@@ -15,7 +15,7 @@ const jobs: Job[] = [
   {
     company: "Lacak.io — PT. Lacak Cipta Aktual",
     role: "Frontend Developer",
-    period: "2026 — Now",
+    period: "2026 Aug — Now",
     location: "Remote",
     highlights: [
       "Refactored real-time vehicle monitoring, the Command Center dashboard and Leaflet map controls for smoother live fleet tracking.",
@@ -27,7 +27,7 @@ const jobs: Job[] = [
   {
     company: "PT. Bank Sinarmas Tbk.",
     role: "Frontend Developer",
-    period: "2026 — Now",
+    period: "2026 Mar — Now",
     location: "Tangerang Selatan",
     highlights: [
       "Built an enterprise Internal Audit Management System: audit teams, planning, project management and org structures.",
@@ -39,7 +39,7 @@ const jobs: Job[] = [
   {
     company: "Prestisa",
     role: "Fullstack Developer",
-    period: "2025",
+    period: "2025 Jan — 2025 May",
     location: "Remote",
     highlights: [
       "Frontend lead on an HRIS project, coordinating with the User, Head IT and Project Manager.",
@@ -50,7 +50,7 @@ const jobs: Job[] = [
   {
     company: "PT. Sinergi Merah Putih",
     role: "Frontend Developer",
-    period: "2024 — 2025",
+    period: "2024 Nov — 2025 Feb",
     location: "Remote",
     highlights: [
       "Implemented 70% of the UI design in Next.js for an HRIS product.",
@@ -61,7 +61,7 @@ const jobs: Job[] = [
   {
     company: "Chup Online Sdn Bhd",
     role: "Frontend Developer",
-    period: "2024",
+    period: "2024 May - 2024 Jun",
     location: "Remote",
     highlights: [
       "Developed the Chup Clinic hospital management app in Nuxt.js.",
@@ -72,7 +72,7 @@ const jobs: Job[] = [
   {
     company: "PT. Bank Rakyat Indonesia (Persero) Tbk.",
     role: "Frontend Developer",
-    period: "2023",
+    period: "2023 May — 2023 Jul",
     location: "Jakarta Selatan",
     highlights: [
       "Selected 1 of 75 from 2,886 applicants for the BRI x Satkomindo IT Bootcamp.",
