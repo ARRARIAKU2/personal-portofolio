@@ -2,7 +2,8 @@ import Navbar from "./components/organisms/Navbar";
 import Header from "./components/organisms/Header";
 import Banner from "./components/organisms/Banner";
 import About from "./components/organisms/About";
-import Service from "./components/organisms/Service";
+import Portofolio from "./components/organisms/Portofolio";
+import Rivals from "./components/organisms/Rivals";
 import Work from "./components/organisms/Work";
 import Contact from "./components/organisms/Contact";
 
@@ -15,8 +16,9 @@ function Home() {
         <Banner />
       </div>
       <About />
-      {/* <Service /> */}
       <Work />
+      <Portofolio />
+      <Rivals />
       <Contact />
       <div className="h-fit"></div>
     </main>

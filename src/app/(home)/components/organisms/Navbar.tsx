@@ -79,18 +79,31 @@ import React, { useEffect, useState } from "react";
 import { BiHomeAlt, BiUser } from "react-icons/bi";
 import { BsClipboardData, BsBriefcase, BsChatSquareText } from "react-icons/bs";
 import { Link } from "react-scroll";
-
-// Define menu items with their corresponding icons and section IDs
-const navLinks = [
-  { id: "home", icon: <BiHomeAlt /> },
-  { id: "about", icon: <BiUser /> },
-  // { id: "service", icon: <BsClipboardData /> },
-  { id: "work", icon: <BsBriefcase /> },
-  { id: "contact", icon: <BsChatSquareText /> },
-];
+import { useRivals } from "@/hooks/useRivals";
+import { rankIcon } from "@/lib/rivals";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
+  const { rank_name } = useRivals();
+
+  // Menu items; the Rivals icon is the current rank badge, after portofolio.
+  const navLinks = [
+    { id: "home", icon: <BiHomeAlt /> },
+    { id: "about", icon: <BiUser /> },
+    { id: "work", icon: <BsBriefcase /> },
+    { id: "portofolio", icon: <BsClipboardData /> },
+    {
+      id: "rivals",
+      icon: (
+        <img
+          src={rankIcon(rank_name)}
+          alt="Marvel Rivals rank"
+          className="w-10 h-10 shrink-0 object-contain"
+        />
+      ),
+    },
+    { id: "contact", icon: <BsChatSquareText /> },
+  ];
 
   useEffect(() => {
     setActiveSection("home"); // Set "home" as active on initial load
@@ -113,7 +126,10 @@ function Navbar() {
                 activeSection === link.id ? "active" : ""
               }`}
             >
-              {link.icon}
+              {/* Fixed, non-shrinking box so .active padding can't squeeze the icon */}
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center">
+                {link.icon}
+              </span>
             </Link>
           ))}
         </div>

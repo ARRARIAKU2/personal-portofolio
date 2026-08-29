@@ -34,12 +34,12 @@ function Banner() {
                 <TypeAnimation
                   sequence={[
                     2000,
-                    "Fullstack", // Types 'One'
+                    "Frontend", // Types 'One'
                     2000, // Waits 1s
-                    "Frontend", // Deletes 'One' and types 'Two'
+                    "Fullstack", // Deletes 'One' and types 'Two'
                     2000, // Waits 2s
-                    "AI Developer", // Deletes 'Two' and types 'Three'
-                    2000, // Waits 2s
+                    // "AI Developer", // Deletes 'Two' and types 'Three'
+                    // 2000, // Waits 2s
                   ]}
                   speed={50}
                   className="text-accent"

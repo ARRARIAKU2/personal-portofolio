@@ -1,10 +1,16 @@
 @import 'tailwindcss';
 
+/* Class-based dark mode for the CRM (portfolio site ignores dark: variants). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-*: initial;
   --font-primary: Orbitron;
   --font-secondary: Rajdhani;
   --font-tertiary: Aldrich;
+  /* Geist stacks (loaded via next/font in the CRM layout) power font-sans/mono. */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, 'JetBrains Mono', monospace;
 
   --breakpoint-*: initial;
   --breakpoint-sm: 640px;
@@ -20,6 +26,33 @@
 
 @utility container {
   padding-inline: 16px;
+}
+
+/* Scrollbar thumb hidden until the container is hovered (WebKit + Firefox). */
+@utility hover-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  &:hover {
+    scrollbar-color: var(--color-zinc-400) transparent;
+  }
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 9999px;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: var(--color-zinc-400);
+  }
+}
+
+/* Skeleton shimmer sweep (CRM). */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /*
@@ -142,5 +175,66 @@ body {
 
   .section {
     @apply h-fit lg:h-screen flex items-center;
+  }
+}
+
+/* =========================================================================
+   ARK Design (portofolio-b) — scoped tokens + helpers.
+   Everything is nested under `.ark` so it never leaks into the CRM/home site.
+   ========================================================================= */
+.ark {
+  --ark-bg: #f7f5f0; /* bone */
+  --ark-surface: #ffffff;
+  --ark-ink: #17181a; /* charcoal */
+  --ark-gray: #6b6f76; /* concrete */
+  --ark-line: #e2dfd8; /* hairline */
+  --ark-accent: #c79a3a; /* brass-amber */
+  --ark-accent-ink: #8a6a1e; /* darker brass for text contrast */
+
+  background-color: var(--ark-bg);
+  color: var(--ark-ink);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* Reset the global body defaults (font-secondary, text-white, uppercase h2) inside ARK. */
+.ark p,
+.ark span,
+.ark a,
+.ark li,
+.ark label,
+.ark input,
+.ark textarea,
+.ark select,
+.ark button {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Blueprint technical grid — used as a subtle section/background accent. */
+.ark-blueprint {
+  background-image: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--ark-ink) 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--ark-ink) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 32px 32px;
+}
+
+/* Respect reduced-motion for all ARK animation. */
+@media (prefers-reduced-motion: reduce) {
+  .ark *,
+  .ark *::before,
+  .ark *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }

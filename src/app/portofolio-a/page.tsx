@@ -1,5 +1,5 @@
-function portoA() {
-  return <h1 className="text-black">tes</h1>;
-}
+import { redirect } from "next/navigation";
 
-export default portoA;
+export default function PortofolioAIndex() {
+  redirect("/portofolio-a/dashboard");
+}
