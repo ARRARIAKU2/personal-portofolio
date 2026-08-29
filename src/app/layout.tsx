@@ -4,27 +4,70 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_URL = "https://alana0707.vercel.app";
+const TITLE = "M. Alana";
+const DESCRIPTION =
+  "A passionate Frontend Developer based in Indonesia with 2 years of experience building modern, responsive web apps with React and Next.js.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://localhost:3000/"),
-
-  title: "M. Alana",
-
-  authors: {
-    name: "M. Alana",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s | M. Alana",
   },
-
-  description:
-    "a Passionate and enthusiastic Frontend Developer with 2 years of experience.",
+  applicationName: "M. Alana Portfolio",
+  authors: { name: "M. Alana", url: "https://www.linkedin.com/in/m-alana/" },
+  creator: "M. Alana",
+  publisher: "M. Alana",
+  description: DESCRIPTION,
+  keywords: [
+    "M. Alana",
+    "Muhammad Alana",
+    "Frontend Developer",
+    "Web Developer",
+    "React Developer",
+    "Next.js Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Portfolio",
+  ],
+  alternates: {
+    canonical: SITE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "M. Alana",
-    description:
-      "a Passionate and enthusiastic Frontend Developer with 2 years of experience.",
-    url: "https://localhost:3000/",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
     siteName: "M. Alana",
-    images: "/profile.jpg",
+    images: [
+      {
+        url: "/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "M. Alana — Frontend Developer",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
-  keywords: ["M. Alana", "Frontend Developer", "React", "Next.js", "Portfolio"],
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/profile.jpg"],
+  },
 };
 
 export default function RootLayout({
