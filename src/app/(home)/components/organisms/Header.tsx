@@ -1,5 +1,4 @@
 "use client";
-import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/app/(home)/components/variant";
@@ -15,16 +14,17 @@ function Header() {
           whileInView={"show"}
         >
           <div className="flex items-center justify-between">
-            <ScrollLink
-              activeClass="active"
-              spy={true}
-              to="about"
-              smooth={true}
-              duration={500}
+            <button
+              type="button"
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="cursor-pointer"
             >
               M. ALANA
-            </ScrollLink>
+            </button>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
