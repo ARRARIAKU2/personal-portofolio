@@ -5,26 +5,26 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://localhost:3000/'),
+  metadataBase: new URL("https://localhost:3000/"),
 
-  title: 'M. Alana',
+  title: "M. Alana",
 
   authors: {
-    name: 'M. Alana',
+    name: "M. Alana",
   },
 
   description:
-    "Based in Indonesia, I'm a Fullstack developer passionate about building a modern web application that users love.",
+    "a Passionate and enthusiastic Frontend Developer with 2 years of experience.",
   openGraph: {
-    title: 'M. Alana',
+    title: "M. Alana",
     description:
-      "Based in Indonesia, I'm a Fullstack developer passionate about building a modern web application that users love.",
-    url: 'https://localhost:3000/',
-    siteName: 'M. Alana',
-    images: '/og.png',
-    type: 'website',
+      "a Passionate and enthusiastic Frontend Developer with 2 years of experience.",
+    url: "https://localhost:3000/",
+    siteName: "M. Alana",
+    images: "/profile.jpg",
+    type: "website",
   },
-  keywords: ['M. Alana', 'Frontend Developer', 'React', 'Next.js', 'Portfolio'],
+  keywords: ["M. Alana", "Frontend Developer", "React", "Next.js", "Portfolio"],
 };
 
 export default function RootLayout({
