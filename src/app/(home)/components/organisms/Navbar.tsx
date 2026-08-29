@@ -78,7 +78,6 @@
 import React, { useEffect, useState } from "react";
 import { BiHomeAlt, BiUser } from "react-icons/bi";
 import { BsClipboardData, BsBriefcase, BsChatSquareText } from "react-icons/bs";
-import { Link } from "react-scroll";
 import { useRivals } from "@/hooks/useRivals";
 import { rankIcon } from "@/lib/rivals";
 
@@ -105,8 +104,29 @@ function Navbar() {
     { id: "contact", icon: <BsChatSquareText /> },
   ];
 
+  // Native smooth scroll — runs on the compositor, smoother on mobile than JS.
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Active-section tracking (replaces react-scroll's spy).
   useEffect(() => {
-    setActiveSection("home"); // Set "home" as active on initial load
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        }
+      },
+      { rootMargin: "-50% 0px -50% 0px" } // fire when section crosses viewport center
+    );
+
+    navLinks.forEach((link) => {
+      const el = document.getElementById(link.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -114,14 +134,11 @@ function Navbar() {
       <div className="p-4 mx-auto">
         <div className="w-full bg-black/20 backdrop-blur-2xl rounded-full max-w-[460px] mx-auto px-2 py-1.5 flex justify-between items-center text-2xl text-white/50">
           {navLinks.map((link) => (
-            <Link
+            <button
               key={link.id}
-              activeClass="active"
-              spy={true}
-              to={link.id}
-              smooth={true}
-              duration={700}
-              onSetActive={() => setActiveSection(link.id)}
+              type="button"
+              onClick={() => scrollTo(link.id)}
+              aria-label={link.id}
               className={`cursor-pointer w-[60px] h-[60px] flex justify-center items-center ${
                 activeSection === link.id ? "active" : ""
               }`}
@@ -130,7 +147,7 @@ function Navbar() {
               <span className="flex h-10 w-10 shrink-0 items-center justify-center">
                 {link.icon}
               </span>
-            </Link>
+            </button>
           ))}
         </div>
       </div>
