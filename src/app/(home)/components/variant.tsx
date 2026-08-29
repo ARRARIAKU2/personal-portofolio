@@ -1,4 +1,6 @@
-function fadeIn(direction: string, delay: number) {
+import type { Variants } from "framer-motion";
+
+function fadeIn(direction: string, delay: number): Variants {
   return {
     hidden: {
       y: direction === "up" ? 80 : direction === "down" ? -80 : 0,

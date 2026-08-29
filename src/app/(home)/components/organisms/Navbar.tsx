@@ -84,7 +84,7 @@ import { Link } from "react-scroll";
 const navLinks = [
   { id: "home", icon: <BiHomeAlt /> },
   { id: "about", icon: <BiUser /> },
-  { id: "service", icon: <BsClipboardData /> },
+  // { id: "service", icon: <BsClipboardData /> },
   { id: "work", icon: <BsBriefcase /> },
   { id: "contact", icon: <BsChatSquareText /> },
 ];

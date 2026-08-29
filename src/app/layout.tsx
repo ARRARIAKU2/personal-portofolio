@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: '/og.png',
     type: 'website',
   },
-  keywords: ['daily web coding', 'chensokheng', 'dailywebcoding'],
+  keywords: ['M. Alana', 'Frontend Developer', 'React', 'Next.js', 'Portfolio'],
 };
 
 export default function RootLayout({

@@ -56,7 +56,7 @@ function Banner() {
             >
               <div className="mb-8 max-w-lg mx-auto lg:mx-0">
                 Hi, I&apos;m Lana, a Passionate and enthusiastic Frontend
-                Developer with 1+ years of experience.
+                Developer with 2 years of experience.
               </div>
             </motion.div>
             <motion.div

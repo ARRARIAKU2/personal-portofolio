@@ -15,7 +15,7 @@ function Home() {
         <Banner />
       </div>
       <About />
-      <Service />
+      {/* <Service /> */}
       <Work />
       <Contact />
       <div className="h-fit"></div>
