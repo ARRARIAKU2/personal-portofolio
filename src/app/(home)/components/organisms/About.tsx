@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import { fadeIn } from "@/app/(home)/components/variant";
 
 const stats = [
-  { end: 2, suffix: "+", label: "Years shipping production web apps" },
+  { end: 2, suffix: "+", label: "Years experience in developing web apps" },
   { end: 8, suffix: "", label: "Companies & fellowship programs" },
   { end: 20, suffix: "+", label: "Certifications earned" },
 ];
