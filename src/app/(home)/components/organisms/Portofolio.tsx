@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { fadeIn } from "@/app/(home)/components/variant";
+import { LinkPreview } from "@/components/ui/link-preview";
 
 interface Project {
   no: string;
@@ -19,7 +20,7 @@ const projects: Project[] = [
     no: "01",
     title: "CRM",
     kind: "Dashboard",
-    href: "/portofolio-a",
+    href: "https://alana0707.vercel.app/portofolio-a",
     description:
       "A frontend-only enterprise CRM: seven roles with permissions enforced route-, widget- and action-deep, a drag-and-drop deal pipeline, and an append-only audit trail you can filter and export.",
     tags: ["Next.js", "TanStack Query", "dnd-kit", "RBAC"],
@@ -28,7 +29,7 @@ const projects: Project[] = [
     no: "02",
     title: "ARK Design",
     kind: "Landing page",
-    href: "/portofolio-b",
+    href: "https://alana0707.vercel.app/portofolio-b",
     description:
       "A premium, frontend-only landing page for a modern-minimalist architecture & construction studio: filterable portfolio, five-step process, accessible FAQ, and a Zod-validated contact form — with per-page SEO and blueprint placeholder art.",
     tags: ["Next.js", "Framer Motion", "React Hook Form", "Zod"],
@@ -94,9 +95,17 @@ function Portofolio() {
                         {project.kind}
                       </span>
                       <div className="mt-1 flex items-center justify-between gap-4">
-                        <h3 className="text-2xl lg:text-3xl font-semibold tracking-tight group-hover:text-accent transition-colors duration-300">
+                        <LinkPreview
+                          url={project.href}
+                          className="text-current"
+                        >
+                          <h3 className="text-2xl lg:text-3xl font-semibold tracking-tight group-hover:text-accent transition-colors duration-300">
+                            {project.title}
+                          </h3>
+                        </LinkPreview>
+                        {/* <h3 className="text-2xl lg:text-3xl font-semibold tracking-tight group-hover:text-accent transition-colors duration-300">
                           {project.title}
-                        </h3>
+                        </h3> */}
                         <HiArrowUpRight className="text-xl text-white/30 -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-accent transition-all duration-300 shrink-0" />
                       </div>
                       <p className="mt-3 text-base leading-relaxed text-white/60 max-w-[55ch]">
