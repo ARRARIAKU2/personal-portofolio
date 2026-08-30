@@ -33,6 +33,15 @@ const projects: Project[] = [
       "A premium, frontend-only landing page for a modern-minimalist architecture & construction studio: filterable portfolio, five-step process, accessible FAQ, and a Zod-validated contact form — with per-page SEO and blueprint placeholder art.",
     tags: ["Next.js", "Framer Motion", "React Hook Form", "Zod"],
   },
+  {
+    no: "03",
+    title: "Travel.id",
+    kind: "Web App",
+    href: "https://staging-booking-travel.vercel.app/",
+    description:
+      "A full-featured Airplane ticketing platform: product listings, shopping cart, checkout flow, and order management, all with a responsive design and seamless user experience.",
+    tags: ["React.js", "Tailwind CSS"],
+  },
 ];
 
 function Portofolio() {

@@ -19,7 +19,7 @@ const jobs: Job[] = [
     location: "Remote",
     highlights: [
       "Refactored real-time vehicle monitoring, the Command Center dashboard and Leaflet map controls for smoother live fleet tracking.",
-      "Shipped reporting & alerting with filtering, export, crash-detection and remote engine on/off in the Hardware Manager.",
+      "Created reporting & alerting with filtering, export, crash-detection and remote engine on/off in the Hardware Manager.",
       "Built end-to-end trip-compliance reporting with tracker selection, validation and live report-status tracking.",
     ],
     stack: ["React", "Leaflet", "Real-time"],
