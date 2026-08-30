@@ -18,11 +18,12 @@ const jobs: Job[] = [
     period: "2026 Aug — Now",
     location: "Remote",
     highlights: [
-      "Refactored real-time vehicle monitoring, the Command Center dashboard and Leaflet map controls for smoother live fleet tracking.",
-      "Created reporting & alerting with filtering, export, crash-detection and remote engine on/off in the Hardware Manager.",
-      "Built end-to-end trip-compliance reporting with tracker selection, validation and live report-status tracking.",
+      "Real-time monitoring & live map — Improved and refactored the real-time vehicle monitoring page, Command Center dashboard, and Leaflet map controls (clustering, popups, control layout) for smoother live fleet tracking, clearer, and easier to use.",
+      "Reporting & alerts — Enhanced the reporting and alerting tools, giving users better ways to filter, export, and act on fleet and driver data, plus crash-detection support in the Alert Monitor.",
+      "Shared UI & hardware control — Strengthened the overall product consistency and usability through refined shared components and interface improvements. and added remote engine on/off control in the Hardware Manager.",
+      "Built end-to-end trip-compliance reporting with tracker selection and validation.",
     ],
-    stack: ["React", "Leaflet", "Real-time"],
+    stack: ["React.js", "Leaflet", "Real-time"],
   },
   {
     company: "PT. Bank Sinarmas Tbk.",
@@ -30,9 +31,9 @@ const jobs: Job[] = [
     period: "2026 Mar — Now",
     location: "Tangerang Selatan",
     highlights: [
-      "Built an enterprise Internal Audit Management System: audit teams, planning, project management and org structures.",
-      "Integrated REST APIs with Axios & SWR — search, filtering, pagination, mandays calculations and audit visualizations.",
-      "Hardened quality with Formik/Yup, Sentry & Elastic APM monitoring and Jest/Testing Library tests.",
+      "Developed and maintained an enterprise Internal Audit Management System using Next.js, React, TypeScript, and Tailwind CSS, delivering modules for Audit Team & Announcement, role management, audit-team workflows, audit planning, project management, and organization structures.",
+      "Integrated REST APIs using Axios and SWR, implementing data fetching, mutations, search, filtering, sorting, pagination, audit-team approvals, audit universe configuration, mandays calculations, and interactive audit visualizations.",
+      "Improved application quality and user experience through Formik/Yup validation, reusable components, responsive tables, confirmation modals, notifications, error handling, Sentry and Elastic APM monitoring, and Jest/Testing Library tests.",
     ],
     stack: ["Next.js", "TypeScript", "Tailwind"],
   },
@@ -45,7 +46,7 @@ const jobs: Job[] = [
       "Frontend lead on an HRIS project, coordinating with the User, Head IT and Project Manager.",
       "Built the frontend in React and the backend in Express.js.",
     ],
-    stack: ["React", "Express.js"],
+    stack: ["React.js", "Express.js"],
   },
   {
     company: "PT. Sinergi Merah Putih",
@@ -78,7 +79,7 @@ const jobs: Job[] = [
       "Selected 1 of 75 from 2,886 applicants for the BRI x Satkomindo IT Bootcamp.",
       "Built a TRO Portal front-end and audit-monitoring page in React with the backend team.",
     ],
-    stack: ["React", "JavaScript"],
+    stack: ["React.js", "JavaScript"],
   },
 ];
 
