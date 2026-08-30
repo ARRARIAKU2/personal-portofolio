@@ -13,7 +13,7 @@ export interface Project {
   /** built area, e.g. "220 m²". */
   area: string;
   /** duration, e.g. "7 bulan". */
-  duration: string;
+  status: string;
   year: number;
   imagePath: string;
   featured?: boolean;
