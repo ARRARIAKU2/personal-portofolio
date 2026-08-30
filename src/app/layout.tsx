@@ -3,7 +3,7 @@ import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +25,17 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: [
     "M. Alana",
+    "M. Alana Universitas Sriwijaya",
+    "M. Alana Sriwijaya",
+    "M. Alana Palembang",
     "Muhammad Alana",
+    "Muhammad Alana Universitas Sriwijaya",
+    "Muhammad Alana Palembang",
+    "Muhammad Alana Sriwijaya",
+    "M Alana",
+    "M Alana Universitas Sriwijaya",
+    "M Alana Palembang",
+    "M Alana Sriwijaya",
     "Frontend Developer",
     "Web Developer",
     "React Developer",
