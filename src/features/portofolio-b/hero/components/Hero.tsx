@@ -95,17 +95,18 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.15 }}
         >
-          <div className="relative mx-auto w-full max-w-[240px] sm:max-w-xs lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
             <ImageSlot
               ratio="4/5"
               path="/portofolio-b/hero-villa.jpg"
+              src="/portofolio-b/hero-villa.jpg"
               alt="Fasad hunian modern minimalis karya ARK Design"
               priority
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="shadow-[0_30px_60px_-30px_rgba(23,24,26,0.35)]"
             />
             {/* floating brass caption chip */}
-            <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-[var(--ark-line)] bg-[var(--ark-surface)] px-5 py-4 shadow-lg sm:block">
+            <div className="absolute -bottom-4 -left-2 rounded-xl border border-[var(--ark-line)] bg-[var(--ark-surface)] px-4 py-3 shadow-lg sm:-bottom-5 sm:-left-5 sm:px-5 sm:py-4">
               <p className="font-[family-name:var(--font-space-grotesk)] text-[11px] uppercase tracking-[0.16em] text-[var(--ark-gray)]">
                 Proyek terbaru
               </p>

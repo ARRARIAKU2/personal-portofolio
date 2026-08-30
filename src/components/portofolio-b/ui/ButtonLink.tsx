@@ -1,6 +1,12 @@
 import { cn } from "@/lib/portofolio-b/cn";
 
-type Variant = "primary" | "secondary" | "ghost" | "link";
+type Variant =
+  | "primary"
+  | "secondary"
+  | "ghost"
+  | "link"
+  | "inverted"
+  | "invertedOutline";
 type Size = "md" | "lg";
 
 const VARIANTS: Record<Variant, string> = {
@@ -10,6 +16,11 @@ const VARIANTS: Record<Variant, string> = {
     "bg-transparent text-[var(--ark-ink)] border border-[var(--ark-ink)]/25 hover:border-[var(--ark-ink)] hover:bg-[var(--ark-ink)]/[0.04]",
   ghost: "bg-transparent text-[var(--ark-ink)] hover:bg-[var(--ark-ink)]/[0.06]",
   link: "bg-transparent text-[var(--ark-ink)] px-0 h-auto gap-1.5 hover:text-[var(--ark-accent-ink)]",
+  // For dark surfaces (e.g. CtaBanner): filled bone + inverted outline.
+  inverted:
+    "bg-[var(--ark-bg)] text-[var(--ark-ink)] border border-[var(--ark-bg)] hover:bg-white hover:border-white",
+  invertedOutline:
+    "bg-transparent text-[var(--ark-bg)] border border-white/25 hover:border-white/60 hover:bg-white/5",
 };
 
 const SIZES: Record<Size, string> = {

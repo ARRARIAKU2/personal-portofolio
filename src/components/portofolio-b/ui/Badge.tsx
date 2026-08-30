@@ -16,7 +16,7 @@ export function Badge({
         tone === "neutral" &&
           "border-[var(--ark-line)] bg-white/60 text-[var(--ark-gray)]",
         tone === "accent" &&
-          "border-[var(--ark-accent)]/30 bg-[var(--ark-accent)]/10 text-[var(--ark-accent-ink)]",
+          "border-transparent bg-[var(--ark-accent)] text-white shadow-sm",
         className
       )}
     >

@@ -1,13 +1,13 @@
 export const valueProps = [
   {
     metric: "1 tim",
-    title: "Desain–bangun terpadu",
-    desc: "Tidak ada lempar tanggung jawab antara arsitek dan kontraktor.",
+    title: "Desain–bangun terintegrasi",
+    desc: "Koordinasi utuh dan terintegrasi dari tahap merancang bangunan hingga konstruksi.",
   },
   {
-    metric: "0 biaya siluman",
+    metric: "100% Transparan",
     title: "RAB terbuka",
-    desc: "Harga material dan upah dirinci sejak awal, bisa Anda telusuri.",
+    desc: "Rincian material dan biaya kerja diberikan secara detail dan transparan sejak awal tanpa biaya tambahan.",
   },
   {
     metric: "2 minggu",
@@ -20,3 +20,8 @@ export const valueProps = [
     desc: "Retensi dan garansi tertulis setelah serah terima.",
   },
 ] as const;
+
+export const valueContent = {
+  kicker: "Value ARK Design",
+  title: "Mengapa memilih ARK Design.",
+} as const;

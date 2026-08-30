@@ -48,9 +48,10 @@ export function Portfolio() {
         </div>
       </div>
 
+      {/* Scroll-snap row on small screens, grid on large. */}
       <motion.ul
         layout
-        className="mt-12 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
+        className="hover-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:gap-y-10 lg:overflow-visible lg:pb-0"
       >
         <AnimatePresence mode="popLayout">
           {filtered.map((project) => (
@@ -61,6 +62,7 @@ export function Portfolio() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={spring}
+              className="w-[85%] shrink-0 snap-start sm:w-[420px] lg:w-auto"
             >
               <ProjectCard project={project} />
             </motion.li>

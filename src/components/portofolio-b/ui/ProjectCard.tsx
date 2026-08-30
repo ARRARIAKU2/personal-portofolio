@@ -9,6 +9,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <ImageSlot
         ratio="4/3"
         path={project.imagePath}
+        src={project.imagePath}
         alt={`${project.name} — ${project.type} di ${project.location}`}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         className="transition-shadow duration-300 group-hover:shadow-[0_24px_48px_-24px_rgba(23,24,26,0.35)]"
@@ -35,7 +36,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <dl className="mt-4 grid grid-cols-3 gap-2 border-t border-[var(--ark-line)] pt-4 text-xs">
           <Meta label="Tipe" value={project.type} />
           <Meta label="Luas" value={project.area} />
-          <Meta label="Durasi" value={project.duration} />
+          <Meta label="Status" value={project.status} />
         </dl>
       </div>
     </article>

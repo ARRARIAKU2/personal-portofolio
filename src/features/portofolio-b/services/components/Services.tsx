@@ -43,10 +43,7 @@ export function Services() {
             className="group border-t border-[var(--ark-line)] py-7 last:border-b"
           >
             <div className="flex items-start gap-5 md:gap-8">
-              <span className="mt-1 font-[family-name:var(--font-space-grotesk)] text-sm text-[var(--ark-gray)]">
-                {s.index}
-              </span>
-              <span className="mt-0.5 inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-[var(--ark-line)] text-[var(--ark-ink)] transition-colors group-hover:border-[var(--ark-accent)] group-hover:text-[var(--ark-accent-ink)]">
+              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-[var(--ark-line)] text-[var(--ark-ink)] transition-colors group-hover:border-[var(--ark-accent)] group-hover:text-[var(--ark-accent-ink)]">
                 <s.icon className="size-5" strokeWidth={1.5} />
               </span>
               <div className="flex-1">
@@ -65,7 +62,10 @@ export function Services() {
                       key={p}
                       className="flex items-center gap-2 text-xs text-[var(--ark-gray)]"
                     >
-                      <span className="size-1 rounded-full bg-[var(--ark-accent)]" aria-hidden />
+                      <span
+                        className="size-1 rounded-full bg-[var(--ark-accent)]"
+                        aria-hidden
+                      />
                       {p}
                     </li>
                   ))}

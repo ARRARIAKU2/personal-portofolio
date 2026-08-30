@@ -14,7 +14,7 @@ export function About() {
     >
       {/* Left — image with offset accent frame */}
       <Reveal className="hidden lg:col-span-5 lg:block">
-        <div className="relative mx-auto w-full max-w-[240px] sm:max-w-xs lg:max-w-none">
+        <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
           <div
             className="absolute -left-4 -top-4 h-full w-full rounded-2xl border border-[var(--ark-accent)]/40"
             aria-hidden
@@ -22,6 +22,7 @@ export function About() {
           <ImageSlot
             ratio="4/5"
             path="/portofolio-b/about-studio.jpg"
+            src="/portofolio-b/about-studio.jpg"
             alt="Tim ARK Design meninjau maket dan gambar kerja di studio"
             sizes="(max-width: 1024px) 100vw, 40vw"
             className="relative"

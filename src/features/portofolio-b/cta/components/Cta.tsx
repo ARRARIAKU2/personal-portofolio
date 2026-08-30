@@ -14,11 +14,7 @@ export function Cta() {
             eyebrow="Konsultasi gratis"
             title="Punya lahan atau rencana renovasi? Mari kita mulai dari obrolan."
           >
-            <ButtonLink
-              href="#kontak"
-              size="lg"
-              className="border-[var(--ark-bg)] bg-[var(--ark-bg)] text-[var(--ark-ink)] hover:bg-white"
-            >
+            <ButtonLink href="#kontak" size="lg" variant="inverted">
               Jadwalkan konsultasi
               <HiArrowRight className="size-4" />
             </ButtonLink>
@@ -27,8 +23,7 @@ export function Cta() {
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              variant="secondary"
-              className="border-white/25 text-[var(--ark-bg)] hover:border-white/60 hover:bg-white/5"
+              variant="invertedOutline"
             >
               Chat WhatsApp
             </ButtonLink>

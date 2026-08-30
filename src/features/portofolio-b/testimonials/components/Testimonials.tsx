@@ -9,7 +9,7 @@ export function Testimonials() {
       <SectionHeading
         id="testimoni-title"
         kicker="Testimoni"
-        title="Dipercaya untuk rumah yang mereka tinggali."
+        title="Kata mereka tentang kami"
         className="max-w-2xl"
       />
 
