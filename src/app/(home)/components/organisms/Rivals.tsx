@@ -82,7 +82,7 @@ function Rivals() {
                   <span className="text-2xl font-bold leading-none sm:text-3xl">
                     {"end" in stat ? (
                       <CountUp
-                        end={stat.end}
+                        end={stat.end ?? 0}
                         duration={3.5}
                         decimals={stat.formattingFn ? 2 : 0}
                         enableScrollSpy
