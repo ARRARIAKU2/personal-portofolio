@@ -117,7 +117,7 @@ function Navbar() {
           if (entry.isIntersecting) setActiveSection(entry.target.id);
         }
       },
-      { rootMargin: "-50% 0px -50% 0px" } // fire when section crosses viewport center
+      { rootMargin: "-50% 0px -50% 0px" }, // fire when section crosses viewport center
     );
 
     navLinks.forEach((link) => {
@@ -132,14 +132,14 @@ function Navbar() {
   return (
     <nav className="fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50">
       <div className="p-4 mx-auto">
-        <div className="w-full bg-black/20 backdrop-blur-2xl rounded-full max-w-[460px] mx-auto px-2 py-1.5 flex justify-between items-center text-2xl text-white/50">
+        <div className="w-full bg-black/20 backdrop-blur-2xl rounded-full max-w-115 mx-auto px-2 py-1.5 flex justify-between items-center text-2xl text-white/50">
           {navLinks.map((link) => (
             <button
               key={link.id}
               type="button"
               onClick={() => scrollTo(link.id)}
               aria-label={link.id}
-              className={`cursor-pointer w-[60px] h-[60px] flex justify-center items-center ${
+              className={`cursor-pointer w-15 h-15 flex justify-center items-center ${
                 activeSection === link.id ? "active" : ""
               }`}
             >

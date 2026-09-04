@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   creator: "M. Alana",
   publisher: "M. Alana",
   description: DESCRIPTION,
+  icons: {
+    icon: "/favicon.ico",
+  },
   keywords: [
     "M. Alana",
     "M. Alana Universitas Sriwijaya",

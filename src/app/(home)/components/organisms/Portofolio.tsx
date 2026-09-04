@@ -46,7 +46,7 @@ const projects: Project[] = [
 
 function Portofolio() {
   return (
-    <section id="portofolio" className="min-h-[100dvh] flex items-center py-24">
+    <section id="portofolio" className="min-h-dvh flex items-center py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-x-8">
           {/* Sticky heading column — asymmetric, left-aligned */}

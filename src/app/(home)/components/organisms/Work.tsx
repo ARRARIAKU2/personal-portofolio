@@ -85,7 +85,7 @@ const jobs: Job[] = [
 
 function Work() {
   return (
-    <section id="work" className="min-h-[100dvh] flex items-center py-24">
+    <section id="work" className="min-h-dvh flex items-center py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
         <motion.div
           variants={fadeIn("right", 0.2)}
@@ -114,7 +114,7 @@ function Work() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.2 }}
-              className="group grid grid-cols-1 lg:grid-cols-12 gap-y-4 lg:gap-x-8 py-6 border-b border-white/10 hover:bg-white/[0.02] transition-colors duration-300"
+              className="group grid grid-cols-1 lg:grid-cols-12 gap-y-4 lg:gap-x-8 py-6 border-b border-white/10 hover:bg-white/2 transition-colors duration-300"
             >
               <div className="lg:col-span-3">
                 <div className="text-sm text-accent">{job.period}</div>
@@ -135,7 +135,7 @@ function Work() {
                       key={i}
                       className="relative text-sm lg:text-base text-white/70 leading-relaxed"
                     >
-                      <span className="absolute -left-[21px] top-2.5 h-1.5 w-1.5 rounded-full bg-accent" />
+                      <span className="absolute -left-5.25 top-2.5 h-1.5 w-1.5 rounded-full bg-accent" />
                       {point}
                     </li>
                   ))}

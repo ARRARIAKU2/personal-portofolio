@@ -6,6 +6,9 @@ import { fadeIn } from "@/app/(home)/components/variant";
 import { useRivals } from "@/hooks/useRivals";
 import { rankIcon, compact, playtime } from "@/lib/rivals";
 import lunaSnow from "../../../../../public/img_nolaehaneun-manyeo.png";
+import carmineCassette from "../../../../../public/img_carmine-cassette.png";
+import radiantRadiance from "../../../../../public/img_radiant-radiance.png";
+import sonicTrailblazer from "../../../../../public/img_sonic-trailblazer.png";
 
 function Rivals() {
   const s = useRivals();
@@ -28,7 +31,7 @@ function Rivals() {
   ];
 
   return (
-    <section id="rivals" className="min-h-[100dvh] flex items-center py-24">
+    <section id="rivals" className="min-h-dvh flex items-center py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
         <motion.div
           variants={fadeIn("up", 0.2)}
@@ -48,12 +51,29 @@ function Rivals() {
           </div>
 
           {/* Character art: stacked in-flow block below lg, absolute bleed from lg */}
-          <Image
-            src={lunaSnow}
-            alt={s.featured_played_character}
-            priority
-            className="pointer-events-none mx-auto block h-[240px] w-auto select-none object-contain sm:h-[300px] lg:absolute lg:-top-24 lg:right-0 lg:mx-0 lg:h-[380px] lg:object-right-top"
-          />
+          <div className="pointer-events-none relative mx-auto h-60 w-full select-none sm:h-75 lg:absolute lg:-top-24 lg:right-0 lg:h-95 lg:w-120">
+            <Image
+              src={carmineCassette}
+              alt=""
+              className="absolute inset-0 z-10 mx-auto h-60 w-auto -translate-x-96 object-contain sm:h-75 lg:h-95"
+            />
+            <Image
+              src={sonicTrailblazer}
+              alt={s.featured_played_character}
+              className="absolute inset-0 z-20 mx-auto h-60 w-auto -translate-x-64 object-contain sm:h-75 lg:h-95"
+            />
+            <Image
+              src={radiantRadiance}
+              alt=""
+              className="absolute inset-0 z-30 mx-auto h-60 w-auto -translate-x-32 object-contain sm:h-75 lg:h-95"
+            />
+            <Image
+              src={lunaSnow}
+              alt=""
+              priority
+              className="absolute inset-0 z-40 mx-auto h-60 w-auto object-contain sm:h-75 lg:h-95"
+            />
+          </div>
 
           {/* Identity block */}
           <div className="relative z-10 text-center lg:text-left">

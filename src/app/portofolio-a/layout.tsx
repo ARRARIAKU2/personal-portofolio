@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "CRM",
   description:
     "Frontend-only enterprise CRM demo with granular RBAC, an append-only audit trail, pipeline kanban and live KPI analytics.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function CrmLayout({

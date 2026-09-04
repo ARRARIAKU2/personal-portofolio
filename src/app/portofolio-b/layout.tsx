@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   applicationName: BRAND,
+  icons: {
+    icon: "/favicon.ico",
+  },
   keywords: [
     "jasa konstruksi",
     "arsitek modern minimalis",
@@ -85,7 +88,9 @@ export default function PortofolioBLayout({
   return (
     <div
       className={`ark ${outfit.variable} ${spaceGrotesk.variable} min-h-[100dvh] antialiased`}
-      style={{ fontFamily: "var(--font-outfit), ui-sans-serif, system-ui, sans-serif" }}
+      style={{
+        fontFamily: "var(--font-outfit), ui-sans-serif, system-ui, sans-serif",
+      }}
     >
       <script
         type="application/ld+json"

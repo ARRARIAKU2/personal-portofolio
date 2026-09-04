@@ -7,7 +7,12 @@ import { fadeIn } from "@/app/(home)/components/variant";
 const EMAIL = "alanakocak62@gmail.com";
 
 const details = [
-  { icon: <FaEnvelope />, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
+  {
+    icon: <FaEnvelope />,
+    label: "Email",
+    value: EMAIL,
+    href: `mailto:${EMAIL}`,
+  },
   {
     icon: <FaWhatsapp />,
     label: "WhatsApp",
@@ -57,7 +62,7 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="min-h-[100dvh] flex items-center py-24">
+    <section id="contact" className="min-h-dvh flex items-center py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-14 lg:gap-x-8">
           {/* Left: intro + channels, asymmetric weight */}
@@ -92,7 +97,9 @@ function Contact() {
                       <div className="text-xs uppercase tracking-wide text-white/40">
                         {item.label}
                       </div>
-                      <div className="text-base text-white/90">{item.value}</div>
+                      <div className="text-base text-white/90">
+                        {item.value}
+                      </div>
                     </div>
                   </div>
                 );
