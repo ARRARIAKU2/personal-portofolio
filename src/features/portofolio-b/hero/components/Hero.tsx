@@ -13,6 +13,17 @@ import {
 import { heroContent, heroStats } from "../data/hero";
 
 export function Hero() {
+  const handleCta = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    event.preventDefault();
+    document.getElementById(href.slice(1))?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section
       id="beranda"
@@ -54,12 +65,17 @@ export function Hero() {
             variants={fadeUp}
             className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
-            <ButtonLink href={heroContent.primaryCta.href} size="lg">
+            <ButtonLink
+              href={heroContent.primaryCta.href}
+              onClick={(event) => handleCta(event, heroContent.primaryCta.href)}
+              size="lg"
+            >
               {heroContent.primaryCta.label}
               <HiArrowRight className="size-4" />
             </ButtonLink>
             <ButtonLink
               href={heroContent.secondaryCta.href}
+              onClick={(event) => handleCta(event, heroContent.secondaryCta.href)}
               variant="secondary"
               size="lg"
             >
