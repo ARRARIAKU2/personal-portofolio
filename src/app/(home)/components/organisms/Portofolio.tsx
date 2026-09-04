@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { fadeIn } from "@/app/(home)/components/variant";
@@ -82,10 +81,7 @@ function Portofolio() {
                 whileInView="show"
                 viewport={{ once: false, amount: 0.3 }}
               >
-                <Link
-                  href={project.href}
-                  className="group block py-4 lg:py-10 transition-colors duration-300"
-                >
+                <div className="group block py-4 lg:py-10 transition-colors duration-300">
                   <div className="flex items-start gap-6">
                     <span className="text-lg text-white/30 group-hover:text-accent transition-colors duration-300 pt-1">
                       {project.no}
@@ -123,7 +119,7 @@ function Portofolio() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               </motion.div>
             ))}
           </div>

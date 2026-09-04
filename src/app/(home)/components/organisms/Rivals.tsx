@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 import { fadeIn } from "@/app/(home)/components/variant";
 import { useRivals } from "@/hooks/useRivals";
 import { rankIcon, compact, playtime } from "@/lib/rivals";
@@ -15,11 +16,15 @@ function Rivals() {
       value: s.highest_rank,
       icon: rankIcon(s.highest_rank),
     },
-    { label: "Time Played", value: playtime(s.playtime_hours) },
-    { label: "Matches Played", value: compact(s.total_games) },
-    { label: "Wins", value: compact(s.total_wins) },
-    { label: "KOs", value: compact(s.total_kills) },
-    { label: "Assists", value: compact(s.total_assists) },
+    {
+      label: "Time Played",
+      end: s.playtime_hours,
+      formattingFn: playtime,
+    },
+    { label: "Matches Played", end: s.total_games },
+    { label: "Wins", end: s.total_wins },
+    { label: "KOs", end: s.total_kills },
+    { label: "Assists", end: s.total_assists },
   ];
 
   return (
@@ -58,7 +63,11 @@ function Rivals() {
 
             <p className="mt-4 flex items-center justify-center gap-2 text-base text-white/70 sm:text-lg lg:justify-start">
               {s.season}: {s.rank_name}
-              <img src={rankIcon(s.rank_name)} alt="" className="h-8 w-8 sm:h-10 sm:w-10" />
+              <img
+                src={rankIcon(s.rank_name)}
+                alt=""
+                className="h-8 w-8 sm:h-10 sm:w-10"
+              />
             </p>
             <p className="mt-1 text-base text-white/70 sm:text-lg">
               Top Hero: {s.featured_played_character}
@@ -71,7 +80,17 @@ function Rivals() {
               <div key={stat.label} className="text-center lg:text-left">
                 <div className="flex items-center justify-center gap-2 lg:justify-start">
                   <span className="text-2xl font-bold leading-none sm:text-3xl">
-                    {stat.value}
+                    {"end" in stat ? (
+                      <CountUp
+                        end={stat.end}
+                        duration={3.5}
+                        decimals={stat.formattingFn ? 2 : 0}
+                        enableScrollSpy
+                        formattingFn={stat.formattingFn ?? compact}
+                      />
+                    ) : (
+                      stat.value
+                    )}
                   </span>
                   {stat.icon && (
                     <img
